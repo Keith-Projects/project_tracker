@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Project Tracker
+    </title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/createElement.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class ="row">
+            <nav class="navbar navbar-expand-lg  navbar-dark bg-primary col-4" >
+                <a class="navbar-brand" href="#">Project Tracker</a>
+
+                <button class="navbar-toggler" type="button" data-target="#navbarItems" data-toggle="collapse" aria-expanded="false" aria-label="toggle navigation">
+                    Open Navigation
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarItems">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a onclick="createNewProject()" href="#" class="nav-link">New Project</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main"></main>
+        </main>
+
+        <footer class="container">
+            <div class="row">
+                <div class="col-3" >
+                    <p class="p text-center">
+                        &copy; Project Tracker 2019
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/xhr.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/newProject.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
