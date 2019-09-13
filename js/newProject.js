@@ -175,8 +175,9 @@ const newProjectForm = () => {
         e.preventDefault();
         let formData = $(this).serialize();
         $.post('back-end/projectTracker.php?request=newproject', formData, function (data){
+
             if (data == '1'){
-                location.reload();
+                Details();
             }
         });
     });

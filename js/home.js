@@ -57,6 +57,7 @@ const homePage = () => {
 
     Xhr('homeCol2-1', 'back-end/projectTracker.php?request=getall');
 
+    
 }
 
 homePage();

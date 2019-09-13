@@ -5,7 +5,8 @@ const Xhr = (id, href) => {
             let xhrResponse = JSON.parse(xhr.responseText);
             if (id == 'homeCol2-1') {
                 allProjectsLayout(xhrResponse);
-
+            } else if (id == 'detailsContainer') {
+                allDetailsLayout(xhrResponse);
             }
 
         }
@@ -38,6 +39,9 @@ const allProjectsLayout = (xhrResponse) => {
         }, {
             'name': 'html',
             'value': 'Title: <a href="#" id="title' + i + '" >' + projects.title + '</a>'
+        }, {
+            'name': 'onclick',
+            'value': 'getProjectDetails(this.id)'
         }]);
 
         // create li for subject
@@ -78,4 +82,8 @@ const allProjectsLayout = (xhrResponse) => {
     });
 
 
+}
+
+const getProjectDetails = (id) => {
+    Details(id);
 }

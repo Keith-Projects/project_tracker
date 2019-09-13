@@ -14,6 +14,10 @@ if (isset($_GET) ){
         case "getall":
         $obj-> getAllProjects();
         break;
+
+        case "details":
+        $obj-> getDetails();
+        break;
     }
 }
 
@@ -53,8 +57,6 @@ class ProjectTracker {
 
             $sql->execute();
 
-            $setFK = $conn->prepare("UPDATE projects SET detail_fk = id");
-            $setFK->execute();
             // return for ajax, 0 false, 1 true
             echo '1';
         }
@@ -78,6 +80,24 @@ class ProjectTracker {
         }
         catch (PDOException $e){
             echo "Error!!!".$e->getMessage();
+        }
+    }
+
+    public function getDetails(){
+        $conn = $this->DbConn();
+        try{
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $id = $_POST["id"];
+            $sql = $conn->prepare("SELECT projects.id, projects.title, todos.* 
+            FROM projects, todos
+            WHERE todos.todo_id = $id AND projects.id = $id");
+            $sql->execute();
+
+            $row = $sql->fetchAll(PDO::FETCH_ASSOC);
+            echo json_encode($row);
+        }
+        catch (PDOException $e) {
+            echo "error getting details: ".$e->getMessage();
         }
     }
 }
