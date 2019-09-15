@@ -1,0 +1,21 @@
+display on overview is complete.
+
+Where am I going to place the "create" new" buttons?
+A: I will place the Create new button inside of the view page for the todos.
+
+Layout for todos view?
+A:  The view page for todos, will replace the content inside of main.
+From top to bottom, left to right, 
+div container,
+div row,
+div col,
+Heading= Project ToDo's 
+
+div row
+div col 
+
+table
+th = title
+th = status
+th created
+th = last updated
