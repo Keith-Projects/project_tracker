@@ -25,7 +25,7 @@ class ProjectTracker {
     public function DbConn(){
         $host = "localhost";
         $user = "root";
-        $pass = "herbie";
+        $pass = "";
         $db = "project_tracker";
 
         try {
@@ -48,12 +48,12 @@ class ProjectTracker {
             $description = $_POST["projectDescription"];
             $timestamp = $_POST["timeStamp"];
 
-            $sql = $conn->prepare("INSERT INTO projects(title, subject, description, timestamp)
-            VALUES(:title, :subject, :description, :timestamp)");
+            $sql = $conn->prepare("INSERT INTO projects(title, subject, description, created)
+            VALUES(:title, :subject, :description, :created)");
             $sql->bindParam(':title', $title);
             $sql->bindParam(':subject', $subject);
             $sql->bindParam(':description', $description);
-            $sql->bindParam(':timestamp', $timestamp);
+            $sql->bindParam(':created', $timestamp);
 
             $sql->execute();
 
@@ -90,7 +90,7 @@ class ProjectTracker {
             $id = $_POST["id"];
             $sql = $conn->prepare("SELECT projects.id, projects.title, todos.* 
             FROM projects, todos
-            WHERE todos.todo_id = $id AND projects.id = $id");
+            WHERE projects.id = $id");
             $sql->execute();
 
             $row = $sql->fetchAll(PDO::FETCH_ASSOC);

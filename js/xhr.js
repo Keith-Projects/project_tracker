@@ -6,7 +6,8 @@ const Xhr = (id, href) => {
             if (id == 'homeCol2-1') {
                 allProjectsLayout(xhrResponse);
             } else if (id == 'detailsContainer') {
-                allDetailsLayout(xhrResponse);
+                //allDetailsLayout(xhrResponse);
+                console.log(xhrResponse);
             }
 
         }
@@ -65,7 +66,7 @@ const allProjectsLayout = (xhrResponse) => {
             'value': 'liCreated' + i
         }, {
             'name': 'html',
-            'value': 'Created: ' + projects.timestamp
+            'value': 'Created: ' + projects.created
         }]);
 
         // create li for description

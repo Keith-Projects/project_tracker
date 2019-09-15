@@ -177,7 +177,10 @@ const newProjectForm = () => {
         $.post('back-end/projectTracker.php?request=newproject', formData, function (data){
 
             if (data == '1'){
-                Details();
+                //Details();
+                location.reload();
+            } else {
+                console.log(data);
             }
         });
     });
