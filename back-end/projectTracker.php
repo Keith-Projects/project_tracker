@@ -4,6 +4,9 @@
 ** PHP class to control back end of project tracker
 * Author: Keith Blackwelder
 */
+
+require_once 'todos.php';
+
 if (isset($_GET) ){
     $obj = new ProjectTracker;
     switch ($_GET["request"]){
@@ -83,23 +86,7 @@ class ProjectTracker {
         }
     }
 
-    public function getDetails(){
-        $conn = $this->DbConn();
-        try{
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $id = $_POST["id"];
-            $sql = $conn->prepare("SELECT projects.id, projects.title, todos.* 
-            FROM projects, todos
-            WHERE projects.id = $id");
-            $sql->execute();
 
-            $row = $sql->fetchAll(PDO::FETCH_ASSOC);
-            echo json_encode($row);
-        }
-        catch (PDOException $e) {
-            echo "error getting details: ".$e->getMessage();
-        }
-    }
 }
 
 

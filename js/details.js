@@ -23,6 +23,7 @@ const Details = (id) => {
     }, function (data) {
         // start tree of elements 
         //  start with row then append a column into the row
+        alert(data);
         createElement('div', '#detailsContainer', 'append', attributes = [{
             'name': 'class',
             'value': 'row'
@@ -44,7 +45,7 @@ const Details = (id) => {
 
         // handle data that was called back
         const dataObj = JSON.parse(data);
-
+console.log( dataObj);
         // create heading
         createElement('h1', '#colContainer', 'append', attributes = [{
             'name': 'class',
