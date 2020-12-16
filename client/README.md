@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Project Tracker
+##Author: Keith Blackwelder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Description
+The Project Tracker Application, is to help a person or company keep track of new or on going projects. This will be mainly for personal use and will be designed more towards programming projects.
 
-## Available Scripts
+# App Work Flow
+The work flow of the app starts with a user creating an account.
+Once the account is created, the user will then be given the option to either go to the sign in page, or create another user.
+Once the user has signed in, he or she will be presented with a dashboard.
+Here the user will have a navigation panel, a header where the title of the user is located, a main area where the user will see the current projects, and a footer to hold informational links and the copy right.
 
-In the project directory, you can run:
+# Components
+all forms will be placed in a class component in order to handle there own state.
+The main app will hold the navigation component, the header component, the mainarea component, and the footer component.
+Each of these components will hold there own set of sub set components.
+## Navigation
+For the navigation, we will have a modern navigation bar, with the brand, icon to open and close the nav whenever the screen is smaller on the device being used, and the navigation links will be placed to the right of the screen.
+The link for the brand name, and the button for the open and close of the nav, will be apart of the navigation component.
+The div that holds the ul list will also be apart of the navigation component.
+The ul that will house the nav links, will be in its own component, making it easy to add and remove links.
 
-### `npm start`
+## Header Component
+The header component, will hold the name of the page, and a link to create a new project.
+For now, the header component will be its own and will not hold any child components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Main Component
+The main component, will hold the selected component that was called by the user.
+Possible components include: MainProjects, SubProjects, ProjectInformation, Issues, Todos, Documentation, DailyNotes.
+For now, this is a start and will be added to as the project grows.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Footer
+The footer component, will hold the informational links as well as the copy right for the application.
+this component will have an ul list that will hold the informational links.
+The copy right will be apart of the footer component.
+The links will be brought in as a child component making it easier to add or remove the links as nessisary.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For now this will be where I start and as the project grows I will update this readme file.
