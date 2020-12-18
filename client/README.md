@@ -36,3 +36,16 @@ The copy right will be apart of the footer component.
 The links will be brought in as a child component making it easier to add or remove the links as nessisary.
 
 For now this will be where I start and as the project grows I will update this readme file.
+
+# Forms
+This project will have quite a few forms associated with it.
+The best way for me to list the forms is to talk through the process of how the app will function.
+Starting wiht Master project.
+This will be the main project that a user can create. The project after established as a master project, will be allowed to hold sub-projects, as well as be its own holder of the project.
+This means that the master project , will also allow the user to create issues, todos, daily notes, and documentation.
+When each of these actions are taken, they will need to be updated.
+In order to do that, we will create a way for each set of information to be edited.
+The user will have a link to edit.
+When in edit mode the user will be able to update all parts of the information he or she is editing.
+Once complete, the user will click submit, and the information that was changed will be updated for the user to view.
+
