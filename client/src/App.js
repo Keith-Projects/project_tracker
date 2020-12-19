@@ -1,12 +1,16 @@
 import React, { Component } from "react";
-import Navigation from "./components/Navigation";
+import Main from "./components/Main";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = [{}];
+  }
   render() {
     return (
-      <div className="container">
-        <Navigation />
-      </div>``
+      <div>
+        <Main />
+      </div>
     );
   }
 }

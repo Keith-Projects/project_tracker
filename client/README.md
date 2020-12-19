@@ -39,7 +39,17 @@ For now this will be where I start and as the project grows I will update this r
 
 # Forms
 This project will have quite a few forms associated with it.
-The best way for me to list the forms is to talk through the process of how the app will function.
+CreateUser.js
+UserSignIn.js
+EditMasterProject.js
+NewMasterProject.js
+The form for creating a new master project will hold the following fields:
+MasterID: (An INT that will be unique and will be determine in the database table)
+Project Name: (The name of the master project)
+Description: (A brief overview of what the project is for)
+Assigned to: (A user who can be either a manager or developer. Will be generated dynamically.)
+Date Created: (will be determined with javascript before formdata is sent.)
+
 Starting wiht Master project.
 This will be the main project that a user can create. The project after established as a master project, will be allowed to hold sub-projects, as well as be its own holder of the project.
 This means that the master project , will also allow the user to create issues, todos, daily notes, and documentation.

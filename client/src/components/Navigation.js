@@ -4,7 +4,7 @@ const Navigation = (props) => {
   return (
     <div className="container">
       <nav>
-        <a>Project Tracker</a>
+        <a href="index.html">Project Tracker</a>
       </nav>
     </div>
   );
